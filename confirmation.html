@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Confirmation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registration Successful!</h2>
+        <p id="confirmationMessage"></p>
+        <a href="index.html"><button>Go Back to Registration</button></a>
+    </div>
+
+    <script>
+        // Retrieve stored data
+        const username = localStorage.getItem('username');
+        const email = localStorage.getItem('email');
+
+        // Display confirmation message
+        const message = `Thank you, ${username}! You have successfully registered with the email: ${email}.`;
+        document.getElementById('confirmationMessage').textContent = message;
+    </script>
+</body>
+</html>
